@@ -3,10 +3,10 @@ import { cloneDeep } from 'lodash';
 import * as actions from './actions';
 
 const INITIAL_STATE = {
-  projects: []
+  modulo: 2,
 };
 
-export function projectsReducer(initialState = INITIAL_STATE, action) {
+export const projectsReducer = (initialState = INITIAL_STATE, action) => {
   const state = cloneDeep(initialState);
 
   switch (action.type) {
@@ -15,4 +15,4 @@ export function projectsReducer(initialState = INITIAL_STATE, action) {
   }
 
   return state;
-}
+};
